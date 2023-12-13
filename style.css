@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#153677,#4e085f);
+    background: linear-gradient(135deg,#153677,#0acbce);
     padding: 10px;
 }
 .todo{
@@ -42,8 +44,14 @@ input{
 button{
     border: none;
     outline: none;
-    background: #ff5945;
-    font-size: 16px;
+    background: -webkit-linear-gradient(
+        right,
+        #003366,
+        #004080,
+        #0059b3,
+        #0073e6
+      );
+    font-size: 20px;
     color: #fff;
     padding: 16px 50px;
     border-radius: 40px;
@@ -56,6 +64,7 @@ ul li{
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
+    position: relative;
 }
 ul li::before{
     content: '';
@@ -63,5 +72,31 @@ ul li::before{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    
+    background-image: url(png/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: rgb(135, 133, 133);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(png/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
 }

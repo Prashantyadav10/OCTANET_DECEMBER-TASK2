@@ -25,6 +25,10 @@
     align-items: center;
     margin-bottom: 20px;
 }
+.todo p{
+    color: rgb(135, 133, 133);
+    margin-top: 20px;
+}
 .row  {
     display: flex;
     align-items: center;
@@ -40,6 +44,7 @@ input{
     outline: none;
     background: transparent;
     padding: 10px;
+    text-align: center;
 }
 button{
     border: none;
@@ -128,4 +133,15 @@ ul li span:hover{
         font-size: 13px;
     }
     
+}
+
+@media only screen and (max-width: 290px){
+    button{
+         padding: 10px 30px;
+        margin-right: 25px;
+        font-size: 10px;
+    } 
+    input{
+        padding: 7px;
+    }    
 }

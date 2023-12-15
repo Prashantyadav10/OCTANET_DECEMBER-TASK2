@@ -136,12 +136,26 @@ ul li span:hover{
 }
 
 @media only screen and (max-width: 290px){
+ 
     button{
-         padding: 10px 30px;
-        margin-right: 25px;
-        font-size: 10px;
-    } 
-    input{
-        padding: 7px;
-    }    
+        padding: 10px 30px;
+       margin-right: 25px;
+       font-size: 10px;
+   } 
+   input{
+       padding: 7px;
+   }
+   .todo{
+       max-width: 240px;
+   }
+   
+   input{
+       text-align: center;
+       max-width: 100px;
+   }
+   input::placeholder{
+    text-align: center; 
+    font-size: 10px;
+  }
+
 }
